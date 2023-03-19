@@ -7,10 +7,10 @@ import lombok.Setter;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-@Table(name = "rol")
 @Getter
 @Setter
+@Entity
+@Table(name = "rol")
 public class Rol {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,12 +19,12 @@ public class Rol {
 	
 	@Column(name = "descripcion", nullable = false, unique = true)
 	private String descripcion;
+
+	@Column(name = "estado", nullable = false, columnDefinition = "boolean default true")
+	private boolean estado;
 	
 	@OneToMany(mappedBy = "rol")
 	private Set<Usuario> usuarios = new HashSet<>();
-	
-	@Column(name = "estado", nullable = false, columnDefinition = "boolean default true")
-	private boolean estado;
 
 	public Rol(){}
 }

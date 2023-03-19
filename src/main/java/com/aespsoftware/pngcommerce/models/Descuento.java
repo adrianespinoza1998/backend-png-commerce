@@ -23,7 +23,7 @@ public class Descuento {
 	private Producto producto;
 	
 	@Column(name = "porcentaje_dscto", nullable = false)
-	private int porcentajeDscto;
+	private double porcentajeDscto;
 	
 	@Column(name = "activo", nullable = false)
 	private boolean activo;

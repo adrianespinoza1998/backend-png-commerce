@@ -37,7 +37,7 @@ public class Devolucion {
 	@Column(name = "fecha", nullable = false)
 	private Date fecha;
 	
-	@OneToMany(mappedBy = "detalleVenta")
+	@OneToMany(mappedBy = "devolucion", cascade = CascadeType.ALL, orphanRemoval = true)
 	private Set<OtroMotivo> otrosMotivos = new HashSet<>();
 	
 	@Column(name = "estado", nullable = false, columnDefinition = "boolean default true")

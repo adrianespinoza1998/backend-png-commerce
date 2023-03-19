@@ -5,6 +5,7 @@ import com.aespsoftware.pngcommerce.dtos.RolDTO;
 import java.util.List;
 
 public interface IRolService {
+
     List<RolDTO> findAll();
     List<RolDTO> findAllBlocked();
     RolDTO findByName(String descripcion);

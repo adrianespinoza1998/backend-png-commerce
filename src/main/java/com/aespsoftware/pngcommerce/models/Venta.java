@@ -27,7 +27,7 @@ public class Venta {
 	private MedioPago medioPago;
 	
 	@Column(name = "monto_total", nullable = false)
-	private int montoTotal;
+	private Long montoTotal;
 	
 	@Column(name = "fecha", nullable = false)
 	private Date fecha;

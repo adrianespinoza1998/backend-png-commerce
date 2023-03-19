@@ -27,10 +27,10 @@ public class DetalleVenta {
 	private Descuento descuento;
 	
 	@Column(name = "cantidad", nullable = false)
-	private int cantidad;
+	private Long cantidad;
 	
 	@Column(name = "precio", nullable = false)
-	private int precio;
+	private Long precio;
 	
 	@Column(name = "estado", nullable = false, columnDefinition = "boolean default true")
 	private boolean estado;

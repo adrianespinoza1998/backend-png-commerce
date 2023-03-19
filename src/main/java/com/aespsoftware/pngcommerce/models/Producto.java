@@ -29,7 +29,7 @@ public class Producto {
 	private String descripcion;
 	
 	@Column(name = "precio", nullable = false, unique = true)
-	private int precio;
+	private Long precio;
 	
 	@OneToMany(mappedBy = "producto")
 	private Set<Descuento> descuentos = new HashSet<>();

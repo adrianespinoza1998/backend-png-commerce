@@ -19,8 +19,8 @@ public class Direccion {
 	private Usuario usuario;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_municipio", referencedColumnName = "id_municipio")
-	private Municipio municipios;
+	@JoinColumn(name = "id_municipio", referencedColumnName = "id_municipio", nullable = false)
+	private Municipio municipio;
 	
 	@Column(name = "calle", nullable = false)
 	private String calle;

@@ -13,7 +13,11 @@ public class OtroMotivo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id_otro_motivo", nullable = false)
 	private Long idOtroMotivo;
-	
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_devolucion", referencedColumnName = "id_devolucion", nullable = false)
+	private Devolucion devolucion;
+
 	@Column(name = "descripcion", nullable = false)
 	private String descripcion;
 	

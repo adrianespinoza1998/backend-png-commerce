@@ -11,4 +11,8 @@ public class RolDTO {
 	private boolean estado;
 	
 	public RolDTO() {}
+
+	public boolean getEstado() {
+		return estado;
+	}
 }
